@@ -1,10 +1,15 @@
 import { RecommendedSection } from "./sections/RecommendedSection/RecommendedSection";
+import { Footer } from "./sections/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <main style={{ padding: 16 }}>
-      <RecommendedSection />
-    </main>
+    <div className="app">
+      <main style={{ padding: 16, flex: 1 }}>
+        <RecommendedSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

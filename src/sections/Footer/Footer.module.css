@@ -1,0 +1,461 @@
+.footerWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  background: #162036;
+  border-radius: 24px 24px 0 0;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 84px 32px 84px;
+}8
+
+.footerPanel {  
+  position: relative;
+  color: #ffffff;
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+/* ========== Верхняя часть футера (основной контент) ========== */
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 0.7fr;
+  margin-bottom: 48px;
+  align-items: start;
+}
+
+/* ========== Левый блок (контакты) ========== */
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-block;
+  width: 140px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.addressGroup,
+.contactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.groupTitle {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.addressText {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.workingHours {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.contactLink {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contactLink:hover {
+  opacity: 0.8;
+}
+
+/* ========== Социальные иконки (под контактами) ========== */
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* ========== Центральный блок (навигация) ========== */
+.navBlock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.navColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navTitle {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navLink {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ========== Правый блок (CTA + рейтинг) ========== */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.ctaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #4a9fff 0%, #3b82f6 100%);
+  border-radius: 16px;
+  padding: 20px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ctaTitle {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.ctaSubtitle {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 16px 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #ffffff;
+  color: #1a1a2e;
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ctaButton:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* ========== Рейтинг ========== */
+.ratingBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.yandexIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.ratingScore {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  color: #fbbf24;
+}
+
+.ratingLabel {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* ========== Нижняя строка (юридическая информация) ========== */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.socialIcon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.socialIconMegamarket {
+  width: auto;
+  height: 20px;
+}
+
+.socialIconMegamarket img {
+  width: auto;
+  height: 20px;
+}
+
+.legalInfo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legalText {
+  font-family: 'Hauora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.legalLink {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: #ffffff;
+}
+
+.madeBy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.madeByLink {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.madeByLink:hover {
+  text-decoration: underline;
+}
+
+/* ========== Адаптив для планшетов ========== */
+@media (max-width: 1024px) {
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ctaBlock {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ctaCard {
+    max-width: 280px;
+  }
+
+  .ratingBlock {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========== Адаптив для мобильных ========== */
+@media (max-width: 768px) {
+  .footerWrapper {
+    border-radius: 24px 24px 0 0;
+  }
+
+  .footerContainer {
+    padding: 32px 16px 24px;
+  }
+
+  .footerPanel {
+    padding: 0;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 24px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Контактный блок */
+  .contactBlock {
+    gap: 20px;
+  }
+
+  /* Навигация */
+  .navColumn {
+    gap: 10px;
+  }
+
+  /* CTA блок на всю ширину */
+  .ctaSection {
+    width: 100%;
+  }
+
+  .ctaCard {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ctaButton {
+    padding: 14px 24px;
+  }
+
+  /* Рейтинг */
+  .ratingBlock {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Нижняя строка */
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 24px;
+  }
+}
+
+/* ========== Адаптив для очень маленьких экранов ========== */
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 24px 16px 20px;
+  }
+
+  .ctaCard {
+    padding: 16px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 14px;
+  }
+
+  .ctaSubtitle {
+    font-size: 13px;
+  }
+}
