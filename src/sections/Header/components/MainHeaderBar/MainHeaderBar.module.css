@@ -1,0 +1,158 @@
+.mainHeaderBar {
+  width: 100%;
+  height: 88px;
+  padding: 16px 84px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1368px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Logo */
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 169px;
+  height: 56px;
+  padding: 0 16px;
+  background: rgba(52, 117, 255, 0.12);
+  border-radius: 12px;
+  text-decoration: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+/* Menu Button */
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 143px;
+  height: 56px;
+  padding: 0 24px;
+  background: #3475ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: -40px; /* Reduce gap to 8px between menu and search */
+}
+
+.menuText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+/* Search Input */
+.searchInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 348px;
+  height: 56px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #dde2eb;
+  border-radius: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.searchPlaceholder {
+  font-family: "Hauora", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #a2a6af;
+}
+
+/* Contact Blocks */
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.primaryText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #162036;
+}
+
+.secondaryText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #454d5e;
+}
+
+/* Shortcuts */
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.shortcutText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #162036;
+}
