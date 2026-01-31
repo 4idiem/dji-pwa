@@ -1,53 +1,15 @@
 import styles from "./MainHeaderBar.module.css";
 
-const MenuIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M3 6H17"
-      stroke="white"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M3 14H17"
-      stroke="white"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+// Animated hamburger/close icon
+interface AnimatedMenuIconProps {
+  isOpen: boolean;
+}
 
-const CloseIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M15 5L5 15"
-      stroke="white"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M5 5L15 15"
-      stroke="white"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
+const AnimatedMenuIcon = ({ isOpen }: AnimatedMenuIconProps) => (
+  <div className={`${styles.hamburger} ${isOpen ? styles.hamburgerOpen : ''}`}>
+    <span className={styles.hamburgerLine}></span>
+    <span className={styles.hamburgerLine}></span>
+  </div>
 );
 
 const SearchIcon = () => (
@@ -141,7 +103,7 @@ export const MainHeaderBar = ({ isMenuOpen, onMenuToggle }: MainHeaderBarProps) 
 
         {/* Menu Button */}
         <button className={styles.menuButton} onClick={onMenuToggle}>
-          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          <AnimatedMenuIcon isOpen={isMenuOpen} />
           <span className={styles.menuText}>Меню</span>
         </button>
 

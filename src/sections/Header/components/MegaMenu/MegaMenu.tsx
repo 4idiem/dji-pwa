@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styles from "./MegaMenu.module.css";
 
 // Icons for left menu
@@ -143,12 +144,39 @@ interface MegaMenuProps {
 }
 
 export const MegaMenu = ({ isOpen, onClose }: MegaMenuProps) => {
-  if (!isOpen) return null;
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsVisible(true);
+      setIsClosing(false);
+    } else if (isVisible) {
+      // Запускаем анимацию закрытия
+      setIsClosing(true);
+      // После завершения анимации скрываем компонент
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        setIsClosing(false);
+      }, 300); // Длительность анимации
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, isVisible]);
+
+  if (!isVisible) return null;
+
+  const wrapperClass = isClosing 
+    ? `${styles.megaMenuWrapper} ${styles.closing}` 
+    : styles.megaMenuWrapper;
+  
+  const backdropClass = isClosing 
+    ? `${styles.backdrop} ${styles.backdropClosing}` 
+    : styles.backdrop;
 
   return (
     <>
-      <div className={styles.backdrop} onClick={onClose} />
-      <div className={styles.megaMenuWrapper}>
+      <div className={backdropClass} onClick={onClose} />
+      <div className={wrapperClass}>
         <div className={styles.megaMenu}>
           {/* Left Column */}
           <div className={styles.leftColumn}>
