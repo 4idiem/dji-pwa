@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "tag": "Новинка",
+    "title": "DJI Mini 5 Pro",
+    "price": 104000,
+    "oldPrice": 125000,
+    "image": "https://static.tildacdn.com/stor6465-3734-4061-a331-666434623862/57347054.jpg",
+    "href": "https://dji-market.ru/dji-mini/tproduct/1459163071-781927539482-kvadrokopter-dji-mini-5-pro"
+  },
+  {
+    "id": 2,
+    "tag": "Популярное",
+    "title": "DJI Osmo Action 5 Pro",
+    "price": 37000,
+    "image": "https://optim.tildacdn.com/stor3739-3532-4164-a163-643161653030/-/format/webp/52695429.webp",
+    "href": "https://dji-market.ru/camera/tproduct/1459189451-249368654412-ekshn-kamera-dji-osmo-action-5-pro"
+  },
+  {
+    "id": 3,
+    "tag": "Популярное",
+    "title": "DJI RS 4 Mini",
+    "price": 52000,
+    "image": "https://static.tildacdn.com/stor3764-3836-4661-a162-393564336337/25676392.jpg",
+    "href": "https://dji-market.ru/handheld/tproduct/1459188801-569659956652-stabilizator-dji-rs-4-mini"
+  },
+  {
+    "id": 4,
+    "tag": "Новинка",
+    "title": "DJI Osmo Pocket 3",
+    "price": 65000,
+    "image": "https://optim.tildacdn.com/stor3738-3037-4661-b565-356662653863/-/format/webp/14664086.png.webp",
+    "href": "https://dji-market.ru/camera/tproduct/1459189451-133744075291-ekshn-kamera-dji-osmo-pocket-3"
+  },
+  {
+    "id": 5,
+    "tag": "Новинка",
+    "title": "DJI Mavic 4 Pro",
+    "price": 124000,
+    "image": "https://optim.tildacdn.com/stor6465-3463-4436-b331-613938636463/-/format/webp/54319070.jpg.webp",
+    "href": "https://dji-market.ru/drones/tproduct/1459193801-513708524792-kvadrokopter-dji-mavic-4-pro"
+  },
+  {
+    "id": 6,
+    "tag": "Новинка",
+    "title": "DJI RM500",
+    "price": 36000,
+    "image": "https://static.tildacdn.com/stor3135-6337-4561-b139-313932383830/75063427.png",
+    "href": "https://dji-market.ru/accessories/tproduct/1459195911-502452847522-pult-dji-smart-controller-rm500"
+  }
+]
