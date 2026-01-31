@@ -1,122 +1,161 @@
+import { useState } from "react";
 import { useFetch } from "../../shared/hooks/useFetch";
 import type { RecommendedResponse } from "../../shared/types/recommended";
+import styles from "./RecommendedSection.module.css";
+
+// SVG иконки стрелок (Outline black, 24px внутри 40px кнопки)
+function ArrowLeftIcon() {
+  return (
+    <svg className={styles.arrowIcon} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18L9 12L15 6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ArrowRightIcon() {
+  return (
+    <svg className={styles.arrowIcon} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18L15 12L9 6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export function RecommendedSection() {
   const { data, loading, error } = useFetch<RecommendedResponse>("/mock/recommended.json");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 1) loading — данные ещё не пришли
+  const items = data ?? [];
+  const visibleCards = 4;
+  const cardWidth = 330;
+  const gap = 16;
+  const maxIndex = Math.max(0, items.length - visibleCards);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  };
+
+  // Состояния загрузки/ошибки/пусто
   if (loading) {
     return (
-      <section>
-        <h2>Рекомендуем</h2>
-        <p>Загрузка...</p>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.headerRow}>
+            <h2 className={styles.title}>Рекомендуем</h2>
+          </div>
+          <p className={styles.loadingText}>Загрузка...</p>
+        </div>
       </section>
     );
   }
 
-  // 2) error — файл не найден / сеть / битый JSON
   if (error) {
     return (
-      <section>
-        <h2>Рекомендуем</h2>
-        <p>Ошибка загрузки: {error}</p>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.headerRow}>
+            <h2 className={styles.title}>Рекомендуем</h2>
+          </div>
+          <p className={styles.errorText}>Ошибка загрузки: {error}</p>
+        </div>
       </section>
     );
   }
 
-  // 3) empty — запрос успешный, но массив пустой
-  const items = data ?? [];
   if (items.length === 0) {
     return (
-      <section>
-        <h2>Рекомендуем</h2>
-        <p>Нет данных</p>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.headerRow}>
+            <h2 className={styles.title}>Рекомендуем</h2>
+          </div>
+          <p className={styles.emptyText}>Нет данных</p>
+        </div>
       </section>
     );
   }
 
-  // 4) success — данные есть
+  // Расчёт смещения для слайдера
+  const translateX = currentIndex * (cardWidth + gap);
+
   return (
-    <section>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-        <h2 style={{ margin: 0 }}>Рекомендуем</h2>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        {/* Header Row: заголовок + стрелки */}
+        <div className={styles.headerRow}>
+          <h2 className={styles.title}>Рекомендуем</h2>
 
-        {/* Стрелки — пока просто кнопки-заглушки (позже сделаем прокрутку/слайдер) */}
-        <div style={{ display: "flex", gap: 8 }}>
-          <button type="button" aria-label="Назад">←</button>
-          <button type="button" aria-label="Вперёд">→</button>
-        </div>
-      </div>
-
-      {/* Лента карточек (пока без логики “листания”) */}
-      <div
-        style={{
-          display: "flex",
-          gap: 12,
-          overflowX: "auto",
-          paddingTop: 12,
-          paddingBottom: 4,
-        }}
-      >
-        {items.map((item, idx) => {
-          const title = item.name ?? "Без названия";
-          const price = item.price ?? "—";
-          const link = item.link ?? "#";
-          const image = item.image;
-
-          // key: идеально иметь id, но его нет -> используем link, иначе запасной вариант
-          const key = link !== "#" ? link : `${title}-${idx}`;
-
-          return (
-            <article
-              key={key}
-              style={{
-                minWidth: 220,
-                border: "1px solid #ddd",
-                borderRadius: 10,
-                padding: 12,
-                background: "#fff",
-              }}
+          <div className={styles.arrowGroup}>
+            <button
+              type="button"
+              className={styles.arrowButton}
+              aria-label="Назад"
+              onClick={handlePrev}
+              disabled={currentIndex === 0}
             >
-              <div
-                style={{
-                  height: 140,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 8,
-                  background: "#f6f6f6",
-                  overflow: "hidden",
-                }}
-              >
-                {image ? (
-                  <img
-                    src={image}
-                    alt={title}
-                    loading="lazy"
-                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                  />
-                ) : (
-                  <span style={{ fontSize: 12, opacity: 0.7 }}>Нет изображения</span>
-                )}
-              </div>
+              <ArrowLeftIcon />
+            </button>
+            <button
+              type="button"
+              className={styles.arrowButton}
+              aria-label="Вперёд"
+              onClick={handleNext}
+              disabled={currentIndex >= maxIndex}
+            >
+              <ArrowRightIcon />
+            </button>
+          </div>
+        </div>
 
-              <div style={{ fontWeight: 600, marginTop: 10 }}>{title}</div>
-              <div style={{ marginTop: 6 }}>{price}</div>
+        {/* Cards Row */}
+        <div className={styles.cardsRow}>
+          <div
+            className={styles.cardsTrack}
+            style={{ transform: `translateX(-${translateX}px)` }}
+          >
+            {items.map((item, idx) => {
+              const title = item.name ?? "Без названия";
+              const price = item.price ?? "—";
+              const link = item.link ?? "#";
+              const image = item.image;
+              const key = link !== "#" ? link : `${title}-${idx}`;
 
-              {link !== "#" ? (
+              return (
                 <a
+                  key={key}
                   href={link}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ display: "inline-block", marginTop: 10 }}
+                  className={styles.card}
                 >
-                  Открыть
+                  {/* Фон карточки - изображение */}
+                  <div className={styles.cardBackground}>
+                    {image && (
+                      <img
+                        src={image}
+                        alt={title}
+                        loading="lazy"
+                        className={styles.cardBackgroundImage}
+                      />
+                    )}
+                  </div>
+
+                  {/* Градиент для читаемости текста */}
+                  <div className={styles.cardOverlay} />
+
+                  {/* Info Block: название + цена */}
+                  <div className={styles.infoBlock}>
+                    <h3 className={styles.cardTitle}>{title}</h3>
+                    <p className={styles.cardPrice}>{price}</p>
+                  </div>
                 </a>
-              ) : null}
-            </article>
-          );
-        })}
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
