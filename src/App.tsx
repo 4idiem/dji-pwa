@@ -1,5 +1,6 @@
 import { RecommendedSection } from "./sections/RecommendedSection/RecommendedSection";
 import { NewArrivalsSection } from "./sections/NewArrivalsSection";
+import { CatalogSection } from "./sections/CatalogSection";
 import { Header } from "./sections/Header";
 import { Footer } from "./sections/Footer";
 import "./App.css";
@@ -8,9 +9,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <main style={{ padding: 16, flex: 1 }}>
+      <main style={{ flex: 1 }}>
         <RecommendedSection />
         <NewArrivalsSection />
+        <CatalogSection />
       </main>
       <Footer />
     </div>

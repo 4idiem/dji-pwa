@@ -13,15 +13,16 @@ import { StarIcon } from "./components/StarIcon";
 export function Footer() {
   return (
     <footer className={styles.footerWrapper}>
-      <div className={styles.footerContainer}>
-        <div className={styles.footerPanel}>
-          {/* Логотип */}
-          <a href="/" className={styles.logo} aria-label="На главную">
-            <img
-              src="https://static.tildacdn.com/tild6634-6631-4438-a438-613035643336/djiiii_11.png"
-              alt="DJI-Market.ru"
-            />
-          </a>
+      <div className={styles.footerInner}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerPanel}>
+            {/* Логотип */}
+            <a href="/" className={styles.logo} aria-label="На главную">
+              <img
+                src="https://static.tildacdn.com/tild6634-6631-4438-a438-613035643336/djiiii_11.png"
+                alt="DJI-Market.ru"
+              />
+            </a>
 
           {/* ========== Верхняя часть ========== */}
           <div className={styles.footerTop}>
@@ -144,6 +145,7 @@ export function Footer() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );
