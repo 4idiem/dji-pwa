@@ -1,6 +1,8 @@
 import { RecommendedSection } from "./sections/RecommendedSection/RecommendedSection";
 import { AdvantagesSection } from "./sections/AdvantagesSection";
 import { NewArrivalsSection } from "./sections/NewArrivalsSection";
+import { CtaBannerSection } from "./sections/CtaBannerSection";
+import { ServicesSection } from "./sections/ServicesSection";
 import { FeaturesSection } from "./sections/FeaturesSection";
 import { CatalogSection } from "./sections/CatalogSection";
 import { HeroSlider } from "./sections/HeroSlider";
@@ -19,6 +21,8 @@ function App() {
         <CatalogSection />
         <FeaturesSection />
         <AdvantagesSection />
+        <ServicesSection />
+        <CtaBannerSection />
       </main>
       <Footer />
     </div>

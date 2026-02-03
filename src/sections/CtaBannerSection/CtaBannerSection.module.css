@@ -1,0 +1,120 @@
+/* ===== CTA Баннер "Мы поможем найти идеальный дрон" ===== */
+.section {
+  width: 1536px;
+  height: 339px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+/* ===== Градиентный баннер ===== */
+.banner {
+  position: absolute;
+  top: 69px;
+  left: 84px;
+  width: 1368px;
+  height: 270px;
+  border-radius: 20px; /* Corner/XM */
+  padding: 32px;
+  background: linear-gradient(2.55deg, #0050D5 -4.05%, #4B9AFA 110.2%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+/* ===== Левый контентный блок ===== */
+.contentBlock {
+  width: 507px;
+  height: 206px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== Логотип ===== */
+.logo {
+  width: 160px;
+  height: 40px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ===== Блок текста ===== */
+.textBlock {
+  width: 507px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  width: 507px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.description {
+  width: 299px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ===== Кнопка ===== */
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 32px; /* Padding/XXL */
+  border-radius: 16px; /* Corner/M */
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.ctaButton:hover {
+  background: #F6F8FB;
+}
+
+.buttonText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #162036;
+  text-align: center;
+}
+
+/* ===== Картинка человека ===== */
+.personImage {
+  position: absolute;
+  left: 532px;
+  top: 0;
+  width: 494px;
+  height: 339px;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
