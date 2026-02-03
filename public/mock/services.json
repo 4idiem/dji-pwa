@@ -1,0 +1,51 @@
+{
+  "title": "Наши услуги",
+  "services": [
+    {
+      "id": "repair",
+      "title": "Ремонт и сервис DJI",
+      "bullets": [
+        "Замена камер, подвесов, шлейфов",
+        "Ремонт",
+        "Калибровка"
+      ],
+      "iconName": "wrench",
+      "href": "/services/repair"
+    },
+    {
+      "id": "firmware",
+      "title": "Прошивка и обновление ПО",
+      "bullets": [
+        "Обновление ПО",
+        "Снятие ограничений",
+        "Ремонт белого экрана"
+      ],
+      "iconName": "gear",
+      "href": "/services/firmware"
+    },
+    {
+      "id": "registration",
+      "title": "Постановка БПЛА на учет",
+      "bullets": [
+        "Помощь в регистрации дронов",
+        "Подготовка документов",
+        "Консультации"
+      ],
+      "iconName": "drone",
+      "href": "/services/registration"
+    },
+    {
+      "id": "training",
+      "title": "Обучение пилотов",
+      "bullets": [
+        "Обучение",
+        "Теория и практика",
+        "Программы под ключ"
+      ],
+      "iconName": "search-drone",
+      "href": "/services/training"
+    }
+  ],
+  "buttonText": "Все услуги",
+  "buttonHref": "/services"
+}

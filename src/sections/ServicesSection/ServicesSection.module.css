@@ -1,0 +1,189 @@
+/* ===== Секция "Наши услуги" ===== */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 84px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.container {
+  width: 1368px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== Заголовок секции ===== */
+.headerRow {
+  width: 1368px;
+  height: 40px;
+}
+
+.sectionTitle {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Сетка карточек ===== */
+.cardsGrid {
+  width: 1368px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 2.5px; /* 42.5 - 40 = 2.5px дополнительно */
+}
+
+/* ===== Карточка услуги ===== */
+.serviceCard {
+  width: 330px;
+  height: 300px;
+  background: #F6F8FB;
+  border-radius: 24px; /* Corner/L */
+  padding: 24px; /* Padding/XL */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+/* ===== Иконка ===== */
+.iconBox {
+  width: 56px;
+  height: 56px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconBox svg {
+  width: 20px;
+  height: 20px;
+  color: #3475FF;
+}
+
+/* ===== Контент карточки ===== */
+.cardContent {
+  width: 282px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardTitle {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Список пунктов ===== */
+.bulletsList {
+  width: 282px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bulletItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  width: 282px;
+}
+
+/* Контейнер маркера */
+.bulletMarker {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Синяя точка */
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  background: #3475FF;
+  border-radius: 50%;
+}
+
+.bulletText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Ссылка "Подробнее" ===== */
+.moreLink {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: #3475FF;
+  text-decoration: none;
+  margin-top: 0;
+}
+
+.moreLink:hover {
+  text-decoration: underline;
+}
+
+/* ===== Кнопка "Все услуги" ===== */
+.footerButtonRow {
+  width: 1368px;
+  display: flex;
+  justify-content: center;
+}
+
+.allServicesButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 32px; /* Padding/XXL */
+  border-radius: 16px; /* Corner/M */
+  border: 1px solid #DDE2EB;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.allServicesButton:hover {
+  background: #F6F8FB;
+}
+
+.buttonText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #162036;
+  text-align: center;
+}
