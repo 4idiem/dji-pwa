@@ -1,0 +1,222 @@
+/* ===== Секция ===== */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 84px;
+  margin-bottom: 80px;
+}
+
+.container {
+  width: 1368px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== Заголовок ===== */
+.headerRow {
+  width: 1368px;
+  height: 40px;
+}
+
+.title {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Контейнер карточек ===== */
+.cardsRow {
+  width: 1368px;
+  height: 320px;
+  display: flex;
+  gap: 16px;
+}
+
+/* ===== Карточка ===== */
+.card {
+  width: 445.33px;
+  height: 320px;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Темы карточек */
+.cardDark {
+  background: #162036;
+}
+
+.cardLight {
+  background: #F6F8FB;
+}
+
+.cardBlue {
+  background: linear-gradient(135deg, #7EB6FF 0%, #5B9FFF 50%, #4A8FEF 100%);
+}
+
+/* ===== Верхняя строка карточки ===== */
+.cardTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ===== Иконка ===== */
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBoxDark {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.iconBoxLight {
+  background: rgba(52, 117, 255, 0.12);
+}
+
+.iconBoxBlue {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== Бейдж ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid;
+  backdrop-filter: blur(64px);
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.badgeDark {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.badgeLight {
+  background: rgba(22, 32, 54, 0.04);
+  border-color: rgba(22, 32, 54, 0.15);
+  color: #162036;
+}
+
+.badgeBlue {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+/* ===== Заголовок карточки ===== */
+.cardTitle {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+  margin-top: 32px;
+  height: 52px;
+  flex: 0 0 auto;
+}
+
+.cardTitleDark {
+  color: #FFFFFF;
+  width: 263px;
+}
+
+.cardTitleLight {
+  color: #162036;
+  width: 147px;
+}
+
+.cardTitleBlue {
+  color: #FFFFFF;
+  width: 118px;
+}
+
+/* ===== Описание карточки ===== */
+.cardDescription {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.cardDescriptionDark {
+  color: rgba(255, 255, 255, 0.8);
+  width: 320px;
+  height: 80px;
+  -webkit-line-clamp: 4;
+}
+
+.cardDescriptionLight {
+  color: #454D5E;
+  width: 370px;
+  height: 60px;
+  -webkit-line-clamp: 3;
+}
+
+.cardDescriptionBlue {
+  color: rgba(255, 255, 255, 0.9);
+  width: 354px;
+  height: 60px;
+  -webkit-line-clamp: 3;
+}
+
+/* ===== Декоративное изображение для светлой карточки ===== */
+.cardImage {
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ===== Состояния загрузки ===== */
+.loadingText,
+.errorText {
+  font-family: "Hauora", sans-serif;
+  font-size: 16px;
+  color: #454D5E;
+  text-align: center;
+  padding: 40px;
+}
+
+.errorText {
+  color: #E74C3C;
+}

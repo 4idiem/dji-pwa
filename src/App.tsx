@@ -1,5 +1,6 @@
 import { RecommendedSection } from "./sections/RecommendedSection/RecommendedSection";
 import { NewArrivalsSection } from "./sections/NewArrivalsSection";
+import { FeaturesSection } from "./sections/FeaturesSection";
 import { CatalogSection } from "./sections/CatalogSection";
 import { HeroSlider } from "./sections/HeroSlider";
 import { Header } from "./sections/Header";
@@ -15,6 +16,7 @@ function App() {
         <RecommendedSection />
         <NewArrivalsSection />
         <CatalogSection />
+        <FeaturesSection />
       </main>
       <Footer />
     </div>
