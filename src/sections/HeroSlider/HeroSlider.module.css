@@ -1,0 +1,321 @@
+/* ===== Контейнер секции ===== */
+.section {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Основной контейнер слайдера ===== */
+.sliderContainer {
+  width: 1536px;
+  height: 384px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Трек с 3 слайдами ===== */
+.sliderTrack {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===== Боковые слайды (peek) ===== */
+.peekSlide {
+  width: 1400px;
+  height: 320px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.peekSlide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.peekSlideOverlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Контент внутри боковых слайдов - не интерактивный */
+.peekSlide .slideContent,
+.peekSlide .productCard {
+  pointer-events: none;
+}
+
+.peekSlide .productCard:hover {
+  transform: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Центральный слайд ===== */
+.centerSlide {
+  width: 1368px;
+  height: 360px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 32px;
+}
+
+.centerSlideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.05) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ===== Левый контент слайда ===== */
+.slideContent {
+  position: relative;
+  z-index: 1;
+  max-width: 621px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.slideTextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slideTitle {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.slideSubtitle {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 361px;
+}
+
+/* ===== Кнопка "Подробнее" ===== */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 56px;
+  padding: 0 32px;
+  gap: 12px;
+  border-radius: 28px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  cursor: pointer;
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #162036;
+  transition: all 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #F6F8FB;
+  border-color: #D1D5DB;
+}
+
+.ctaButton:active {
+  transform: scale(0.98);
+}
+
+/* ===== Карточка товара справа ===== */
+.productCard {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  min-width: 280px;
+  height: 150px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.productImageWrapper {
+  width: 110px;
+  min-width: 110px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #F6F8FB;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productInfo {
+  flex: 1;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Бейдж "Рекомендуем" ===== */
+.productBadge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  height: 20px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #F0F2F5;
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #454D5E;
+  margin-bottom: 10px;
+}
+
+.productBadge::before {
+  content: "•";
+  margin-right: 4px;
+  color: #3475FF;
+}
+
+.productName {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #162036;
+  margin: 0 0 auto 0;
+}
+
+.productPrices {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.priceCurrent {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #162036;
+}
+
+.priceOld {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #A2A6AF;
+  text-decoration: line-through;
+}
+
+/* ===== Точки навигации ===== */
+.dotsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DDE2EB;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: #A2A6AF;
+}
+
+.dotActive {
+  width: 24px;
+  border-radius: 4px;
+  background: #3475FF;
+}
+
+.dotActive:hover {
+  background: #3475FF;
+}
+
+/* ===== Состояния загрузки и ошибки ===== */
+.loadingContainer,
+.errorContainer {
+  width: 1536px;
+  height: 384px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F8FB;
+  border-radius: 16px;
+}
+
+.loadingText,
+.errorText {
+  font-family: "Hauora", sans-serif;
+  font-size: 18px;
+  color: #454D5E;
+}
+
+.errorText {
+  color: #E74C3C;
+}

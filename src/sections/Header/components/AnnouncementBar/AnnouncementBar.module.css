@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  animation: marquee 60s linear infinite;
+  animation: marquee 40s linear infinite;
   flex-shrink: 0;
 }
 

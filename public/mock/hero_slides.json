@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "hero": {
+      "title": "Качество изображения нового уровня",
+      "subtitle": "Получайте детализированные изображения c новой моделью DJI Mavic 3 Enterprise",
+      "ctaText": "Подробнее",
+      "bgImage": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1400&h=400&fit=crop"
+    },
+    "productCard": {
+      "badgeText": "Рекомендуем",
+      "productImage": "https://static.tildacdn.com/tild6137-3430-4862-a339-636539313339/mini-5-pro-product-c.png",
+      "productName": "DJI Mini 4 Pro",
+      "priceCurrent": "104 000 ₽",
+      "priceOld": "125 000 ₽",
+      "link": "https://dji-market.ru/dji-mini/tproduct/1459163071-544259600101-kvadrokopter-dji-mini-4-pro"
+    }
+  },
+  {
+    "id": 2,
+    "hero": {
+      "title": "Профессиональная съёмка без границ",
+      "subtitle": "DJI Mavic 4 Pro — идеальный выбор для профессионалов и энтузиастов",
+      "ctaText": "Подробнее",
+      "bgImage": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=1400&h=400&fit=crop"
+    },
+    "productCard": {
+      "badgeText": "Новинка",
+      "productImage": "https://static.tildacdn.com/tild6239-6634-4536-b161-303831333564/mavic-4-pro-product-.png",
+      "productName": "DJI Mavic 4 Pro",
+      "priceCurrent": "165 000 ₽",
+      "priceOld": null,
+      "link": "https://dji-market.ru/drones/tproduct/1459193801-513708524792-kvadrokopter-dji-mavic-4-pro"
+    }
+  },
+  {
+    "id": 3,
+    "hero": {
+      "title": "Звук студийного качества",
+      "subtitle": "Беспроводная микрофонная система DJI Mic 3 для создателей контента",
+      "ctaText": "Подробнее",
+      "bgImage": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1400&h=400&fit=crop"
+    },
+    "productCard": {
+      "badgeText": "Хит продаж",
+      "productImage": "https://optim.tildacdn.com/stor6162-3939-4330-b435-663866346361/-/format/webp/66903096.jpg.webp",
+      "productName": "DJI Mic 3",
+      "priceCurrent": "32 000 ₽",
+      "priceOld": "38 000 ₽",
+      "link": "https://dji-market.ru/dji-mic/tproduct/1459184161-340590513342-besprovodnoi-mikrofon-dji-mic-3"
+    }
+  }
+]
