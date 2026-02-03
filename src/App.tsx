@@ -1,4 +1,5 @@
 import { RecommendedSection } from "./sections/RecommendedSection/RecommendedSection";
+import { AdvantagesSection } from "./sections/AdvantagesSection";
 import { NewArrivalsSection } from "./sections/NewArrivalsSection";
 import { FeaturesSection } from "./sections/FeaturesSection";
 import { CatalogSection } from "./sections/CatalogSection";
@@ -17,6 +18,7 @@ function App() {
         <NewArrivalsSection />
         <CatalogSection />
         <FeaturesSection />
+        <AdvantagesSection />
       </main>
       <Footer />
     </div>

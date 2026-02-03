@@ -1,0 +1,170 @@
+/* ===== Секция ===== */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 84px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.container {
+  width: 1368px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== Заголовок ===== */
+.headerRow {
+  width: 1368px;
+  height: 40px;
+}
+
+.title {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Контент с карточками ===== */
+.advantagesContent {
+  width: 1368px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Верхний ряд (2 карточки) ===== */
+.topCardsRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* ===== Маленькая карточка ===== */
+.cardSmall {
+  width: 676px;
+  height: 186px;
+  border-radius: 16px;
+  padding: 24px;
+  background: #F6F8FB;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ===== Иконка ===== */
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(52, 117, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #3475FF;
+}
+
+/* ===== Текстовый блок маленькой карточки ===== */
+.textBlockSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardTitleSmall {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #162036;
+  margin: 0;
+}
+
+.cardDescSmall {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #454D5E;
+  margin: 0;
+}
+
+/* ===== Широкая карточка ===== */
+.cardWide {
+  width: 1368px;
+  height: 98px;
+  border-radius: 16px;
+  padding: 24px;
+  background: #F6F8FB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Текстовый блок широкой карточки ===== */
+.textBlockWide {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 1;
+}
+
+.cardTitleWide {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #162036;
+  margin: 0;
+}
+
+.cardDescWide {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #454D5E;
+  margin: 0;
+}
+
+/* ===== Декоративный логотип DJI ===== */
+.decorDJI {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Hauora", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  color: #3475FF;
+  opacity: 0.2;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ===== Состояния загрузки ===== */
+.loadingText,
+.errorText {
+  font-family: "Hauora", sans-serif;
+  font-size: 16px;
+  color: #454D5E;
+  text-align: center;
+  padding: 40px;
+}
+
+.errorText {
+  color: #E74C3C;
+}
