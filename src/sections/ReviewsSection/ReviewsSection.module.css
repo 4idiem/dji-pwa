@@ -1,0 +1,102 @@
+/* Секция "Отзывы клиентов" */
+.section {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-left: 84px;
+  padding-right: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1368px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Row */
+.headerRow {
+  width: 100%;
+  max-width: 1368px;
+  height: 56px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #162036;
+  margin: 0;
+}
+
+/* Рейтинг справа */
+.ratingBlock {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.pinIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratingText {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ratingValue {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #162036;
+}
+
+.ratingLabel {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #454D5E;
+}
+
+/* Carousel - бегущая строка */
+.carouselWrapper {
+  width: calc(100% + 168px);
+  margin-left: -84px;
+  margin-right: -84px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 16px;
+  padding-left: 84px;
+  will-change: transform;
+}
+
+/* Loading & Error states */
+.loadingText,
+.errorText,
+.emptyText {
+  font-size: 16px;
+  color: #454D5E;
+}
