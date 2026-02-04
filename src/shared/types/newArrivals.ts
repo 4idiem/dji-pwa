@@ -6,6 +6,8 @@ export interface NewArrivalItem {
   oldPrice?: number;
   image: string;
   href: string;
+  isSale?: boolean;
+  isRecommended?: boolean;
 }
 
 export type NewArrivalsResponse = NewArrivalItem[];

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useFetch } from "../../shared/hooks/useFetch";
 import type { NewArrivalsResponse } from "../../shared/types/newArrivals";
-import styles from "./RecommendedSection.module.css";
+import styles from "./SalesSection.module.css";
 
-// SVG иконки стрелок (Outline black, 24px внутри 40px кнопки)
+// SVG иконки стрелок
 function ArrowLeftIcon() {
   return (
     <svg className={styles.arrowIcon} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -20,19 +20,30 @@ function ArrowRightIcon() {
   );
 }
 
+// Иконка сравнения
+function CompareIcon() {
+  return (
+    <svg className={styles.compareIcon} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="10" width="4" height="8" rx="1" fill="#A2A6AF" />
+      <rect x="8" y="6" width="4" height="12" rx="1" fill="#C4C8D0" />
+      <rect x="14" y="2" width="4" height="16" rx="1" fill="#A2A6AF" />
+    </svg>
+  );
+}
+
 // Форматирование цены
 function formatPrice(price: number): string {
   return price.toLocaleString("ru-RU") + " ₽";
 }
 
-export function RecommendedSection() {
+export function SalesSection() {
   const { data, loading, error } = useFetch<NewArrivalsResponse>("/mock/new_arrivals.json");
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Фильтруем только товары с isRecommended === true
-  const items = (data ?? []).filter((item) => item.isRecommended === true);
-  const visibleCards = 4;
-  const cardWidth = 330;
+  // Фильтруем только товары с isSale === true
+  const items = (data ?? []).filter((item) => item.isSale === true);
+  const visibleCards = 5;
+  const cardWidth = 260.8;
   const gap = 16;
   const maxIndex = Math.max(0, items.length - visibleCards);
 
@@ -50,7 +61,7 @@ export function RecommendedSection() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.headerRow}>
-            <h2 className={styles.title}>Рекомендуем</h2>
+            <h2 className={styles.title}>Акции</h2>
           </div>
           <p className={styles.loadingText}>Загрузка...</p>
         </div>
@@ -63,7 +74,7 @@ export function RecommendedSection() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.headerRow}>
-            <h2 className={styles.title}>Рекомендуем</h2>
+            <h2 className={styles.title}>Акции</h2>
           </div>
           <p className={styles.errorText}>Ошибка загрузки: {error}</p>
         </div>
@@ -76,7 +87,7 @@ export function RecommendedSection() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.headerRow}>
-            <h2 className={styles.title}>Рекомендуем</h2>
+            <h2 className={styles.title}>Акции</h2>
           </div>
           <p className={styles.emptyText}>Нет данных</p>
         </div>
@@ -92,7 +103,7 @@ export function RecommendedSection() {
       <div className={styles.container}>
         {/* Header Row: заголовок + стрелки */}
         <div className={styles.headerRow}>
-          <h2 className={styles.title}>Рекомендуем</h2>
+          <h2 className={styles.title}>Акции</h2>
 
           <div className={styles.arrowGroup}>
             <button
@@ -123,38 +134,63 @@ export function RecommendedSection() {
             style={{ transform: `translateX(-${translateX}px)` }}
           >
             {items.map((item) => {
-              const title = item.title;
-              const price = formatPrice(item.price);
-              const link = item.href;
-              const image = item.image;
+              const hasDiscount = item.oldPrice !== undefined;
+              // Меняем текст бейджа: если был "Новинка", показываем оригинальный tag
+              // или можно заменить на "Акция" для всех
+              const displayTag = item.tag;
 
               return (
                 <a
                   key={item.id}
-                  href={link}
+                  href={item.href}
                   target="_blank"
                   rel="noreferrer"
                   className={styles.card}
                 >
-                  {/* Фон карточки - изображение */}
-                  <div className={styles.cardBackground}>
-                    {image && (
-                      <img
-                        src={image}
-                        alt={title}
-                        loading="lazy"
-                        className={styles.cardBackgroundImage}
-                      />
+                  {/* Tag Row */}
+                  <div className={styles.tagRow}>
+                    {displayTag && (
+                      <div className={styles.tag}>
+                        <span className={styles.tagTriangle} />
+                        <div className={styles.tagBody}>
+                          <span className={styles.tagDot} />
+                          <span className={styles.tagText}>{displayTag}</span>
+                        </div>
+                      </div>
                     )}
+                    <button
+                      type="button"
+                      className={styles.compareButton}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // TODO: Добавить логику сравнения
+                      }}
+                      aria-label="Добавить к сравнению"
+                    >
+                      <CompareIcon />
+                    </button>
                   </div>
 
-                  {/* Градиент для читаемости текста */}
-                  <div className={styles.cardOverlay} />
+                  {/* Image Block */}
+                  <div className={styles.imageBlock}>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className={styles.productImage}
+                    />
+                  </div>
 
-                  {/* Info Block: название + цена */}
+                  {/* Info Block */}
                   <div className={styles.infoBlock}>
-                    <h3 className={styles.cardTitle}>{title}</h3>
-                    <p className={styles.cardPrice}>{price}</p>
+                    <h3 className={styles.cardTitle}>{item.title}</h3>
+                    <div className={styles.priceRow}>
+                      <p className={styles.currentPrice}>{formatPrice(item.price)}</p>
+                      {hasDiscount && (
+                        <p className={styles.oldPrice}>{formatPrice(item.oldPrice!)}</p>
+                      )}
+                    </div>
                   </div>
                 </a>
               );
