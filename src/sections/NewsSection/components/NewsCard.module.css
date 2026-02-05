@@ -1,0 +1,106 @@
+/* Карточка новости */
+.card {
+  width: 445.33px;
+  min-width: 445.33px;
+  height: 394.33px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Блок изображения */
+.imageWrapper {
+  width: 445.33px;
+  height: 278.33px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+/* Бейдж "Обзор" */
+.badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: fit-content;
+  height: 28px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+/* Блок текста */
+.textBlock {
+  width: 445.33px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 24px;
+}
+
+/* Заголовок */
+.title {
+  width: 421.33px;
+  max-height: 52px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: var(--main-black, #162036);
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Описание */
+.excerpt {
+  width: 421.33px;
+  max-height: 40px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: var(--transparent-black-80, #454D5E);
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}

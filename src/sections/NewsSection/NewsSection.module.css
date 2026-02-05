@@ -1,0 +1,119 @@
+/* Секция "Новости" */
+.section {
+  width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-left: 84px;
+  padding-right: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container {
+  max-width: 1368px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Row - заголовок + стрелки */
+.headerRow {
+  width: 100%;
+  max-width: 1368px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.title {
+  max-width: 1256px;
+  height: 35px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: var(--main-black, #162036);
+  margin: 0;
+}
+
+/* Блок стрелок */
+.arrowGroup {
+  width: 88px;
+  height: 40px;
+  display: flex;
+  gap: 8px;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke-dark, #DDE2EB);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, opacity 0.2s, background-color 0.2s;
+}
+
+.arrowButton:hover:not(:disabled) {
+  border-color: var(--main-black, #162036);
+  background-color: rgba(22, 32, 54, 0.05);
+}
+
+.arrowButton:active:not(:disabled) {
+  background-color: rgba(22, 32, 54, 0.1);
+}
+
+.arrowButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--main-black, #162036);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* Cards Row - контейнер карточек */
+.cardsRow {
+  width: 100%;
+  max-width: 1368px;
+  height: 394.33px;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.cardsTrack {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* Состояния загрузки/ошибки/пусто */
+.loadingText,
+.errorText,
+.emptyText {
+  font-family: "Hauora", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondary-gray, #7C818B);
+}
+
+.errorText {
+  color: #e53935;
+}
