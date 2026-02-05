@@ -3,6 +3,7 @@ import { AdvantagesSection } from "./sections/AdvantagesSection";
 import { NewArrivalsSection } from "./sections/NewArrivalsSection";
 import { SalesSection } from "./sections/SalesSection";
 import { ReviewsSection } from "./sections/ReviewsSection";
+import { VideoReviewsSection } from "./sections/VideoReviewsSection";
 import { CtaBannerSection } from "./sections/CtaBannerSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { FeaturesSection } from "./sections/FeaturesSection";
@@ -25,6 +26,7 @@ function App() {
         <AdvantagesSection />
         <ServicesSection />
         <CtaBannerSection />
+        <VideoReviewsSection />
         <SalesSection />
         <ReviewsSection />
       </main>
