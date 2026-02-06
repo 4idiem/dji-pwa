@@ -24,6 +24,7 @@
 }
 
 /* ===== Левый контентный блок ===== */
+
 .contentBlock {
   width: 507px;
   height: 206px;
@@ -46,6 +47,7 @@
 }
 
 /* ===== Блок текста ===== */
+
 .textBlock {
   width: 507px;
   display: flex;
@@ -63,6 +65,7 @@
   color: #FFFFFF;
   margin: 0;
   white-space: pre-line;
+  margin-top: 0;
 }
 
 .description {
@@ -72,7 +75,7 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
   white-space: pre-line;
 }
@@ -117,4 +120,17 @@
   object-fit: contain;
   z-index: 1;
   pointer-events: none;
+}
+
+/* ===== Картинка дрона ===== */
+.droneImage {
+  position: absolute;
+  left: 605px;
+  top: -90px;
+  width: 568.28px;
+  height: 373.97px;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  transform: scale(1.4) rotate(-2.71deg);
 }

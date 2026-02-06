@@ -1,1 +1,1 @@
-export { CtaBannerSection } from "./CtaBannerSection";
+export { CtaBannerSection, CtaBannerConsultation } from "./CtaBannerSection";
