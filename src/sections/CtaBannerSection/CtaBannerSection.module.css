@@ -27,10 +27,9 @@
 
 .contentBlock {
   width: 507px;
-  height: 206px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 24px;
 }
 
 /* ===== Логотип ===== */

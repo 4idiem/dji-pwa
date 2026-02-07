@@ -1,0 +1,52 @@
+{
+  "title": "Как к нам добраться",
+  "coords": {
+    "lat": 55.743598,
+    "lng": 37.505394
+  },
+  "yandexMapUrl": "https://yandex.com/maps/-/CPE2BQMk",
+  "yandexMapIframeUrl": "https://yandex.ru/map-widget/v1/?ll=37.505394%2C55.743598&z=16&pt=37.505394,55.743598,pm2rdm",
+  "metroStation": {
+    "name": "Багратионовская",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEX////54uTtrrHnlJj43+D10tTZO0TPAADSAADXLDjzycvmio7dWmH21tjfY2rjfYLlhInutLbxv8Hhc3nyxsjvubzWIi/faW/++vrUABvTABDWHSv76+zpm5/rpancT1fVFCTUABjbSFH99vcIcgNhAAAAtElEQVR4AcXKBXLEMBBE0b8mSWZm1v3PGE6MlaLAK5rpbn7fwzBNw+KO7QiplBTK5cITvg0QhCLiJBYJH1KRcZCL4vjslRVADm4NRA07trCAvIWuAHqRsxkagFCOiZwAlMcm84Fezl05ywdQhfsyBIY2XJaq9T7HnzwF1izzOLNla8EasUmFphiGQut0GBJqkbAjTXZGqdkZxIMvvfQ4cCSfdKc40uPWdZqzf+qYvunQPX/gGVEKC71xbkayAAAAAElFTkSuQmCC"
+  },
+  "address": "Москва, Багратионовский проезд, д. 7, корп. 20В, БЦ «Конвент Плюс»",
+  "workingHours": "ПН–ВС: с 09:00 до 18:00",
+  "contactLabel": "Cвяжитесь с нами:",
+  "phone": "+7 495 211-11-07",
+  "email": "info@dji-market.ru",
+  "whatsappPhone": "74952111107",
+  "socialLinks": [
+    {
+      "name": "Telegram",
+      "href": "https://t.me/djimarket",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEX////8/f+41Pd7sfFFmO0gius9le1zrfCuzvby9/2QvPMTh+srjewzkOwykOwMhuvV5frB2figxvW20vfq8v1np/A4kuzv9f3i7fxtqvDO4fmWwPRQne7L3/kAguqGt/Ld6/s4puGjAAAA/0lEQVR4AayRhQ5DMQhFeVKFls5d/v8rt9I1YRLfjcLBgT9oGKfZGOt8+EYRDaWcExmePnAhk1MX4ajZgpNW5qXKY0lT4lVnA1X7I3cNTdEkJYNY+25eiahn2S53u0p5L3DsiZn4cAQAgXQSOFFjxpx2AAGgmBp5FjhnqWd9beGOvRQKrOvjptaDCxcAOJHA8IJmbA2uMoVT0D4b5Ntlt8i0g+YQCD0wk0GDd7EHFmjF8H0V2kilO4oRBQZOndbefdgCatGqjIcBbtWkMzQFfT9qs3L59c4sDNVDlx8PxQmURlY/Ja55SusNU24Iz3f41P4041M2FvitEB4jPp0DAHyFFi4xND68AAAAAElFTkSuQmCC"
+    },
+    {
+      "name": "Тенчат",
+      "href": "https://tenchat.ru/djimarket",
+      "icon": "tenchat"
+    },
+    {
+      "name": "Дзен",
+      "href": "https://dzen.ru/djimarket",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEVHcEwgICIgICIgICIgICIgICIgICIgICIgICIgICIgICIgICIWFhgCAgSqqqu0tLXHx8ja2tr29vY2Njf///+ZmZnz8/O8vL1iz8E4AAAADHRSTlMAHmCVuNfm9f8d5wnbUshcAAAA2ElEQVR4AYWTVQLEIAxEWbSuyP1PWi/NrGV+50FcXHpJpY11riics0YrWQoqaYsPVTLbtSm+ytSXXxA1TUF0EvR923Ut/eOIX1Cg7ylQyA2wAAwDAHarrwBgHAEoSiERmCYEpFBQw+z9DHUooeGD4H2AL7QwAETvIwAGimiT35RaKMM99u6fxIO4A2h3zSH6SzHM7a4D2HPv+mG83MyMQ9/t9WRgQmDKAAmRmYmG+J5kbpbjyzQ4Cu9xGIZtNTssftwlszDcyrFLy609ezj86f05Xisvkzn/FbaSJDXv12ZOAAAAAElFTkSuQmCC"
+    },
+    {
+      "name": "YouTube",
+      "href": "https://youtube.com/djimarket",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABJklEQVR4Ae2WpVaFQRSFcaeS4QVwIjTiLbgk7D1w9xeg4FQcOu6acHeXtNnDmsFd7in/WetLI+f7dbYDAFEsAUvgoeAQ5k5iSQFpIH1kkMyQFXJMTsgpwTuc6jlHes2M3qNP71mge7g76DLNg8gygZ1QckGmuSdZJ7Azq8RDCSQTCJGgBCoFBWqVQLegQJcSmPnWIr9oICMXcIr4C4FJJbD9rUX+NtzX+CIQlfVbgS0lcP4jAVNt/UCA7acCZ0oAPxfQdXMLFNUBvpHflvgbAVM7h0B6zrfeD3kB+Ucg/xLKf4biPyLJX3GH9GFUogRSBQUSTSBZEwskQpFs1USyl6E0gRSRJtJPhsnci1B69oVQeqzXzOo9+kmj3juBeDw2BkSxBCyBO+9s03HRLVCoAAAAAElFTkSuQmCC"
+    }
+  ],
+  "mapButtons": {
+    "howToGet": {
+      "label": "Как добраться",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAvElEQVR4AWL4TwIcBGDAGMb4XwXswC0sgPO/APwPwP8C8D8A/wPwPwD/A/A/AP8D8D8A/wPwPwD/A/A/AP8D8D/AeQD+B8D/wP9B6GHoBww9DP2AoYehHzD0MPQDhh6GfsDQw9APGHoY+gFDD0M/YOhh6AcMPQz9gKGHoR8w9DD0A4Yehn7A0MPQDxh6GPoB Qw9DP2DoYegHDD0M/YChhwPwAN4W0QAAAABJRU5ErkJggg=="
+    },
+    "taxi": {
+      "label": "Доехать на такси",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAgVBMVEX/6gD/6wD/7QD/8wDi0ADdywD24QD/8QDIuABoXwASEAAAAACcjwD/8ABJQwCvoQApJgB4bgDz3wBsYwCEeQBBPAB1awAxLgDp1gD/+QCqnAAcGgA3MwBeVgD/9QBfVwCZjADQvwAXFQDWxQCShgCJfgC/rwB+dAAkIQAKCQB3bQAuvZuLAAABKklEQVR4AZWRhZYCMQxFX1JoYTtBxnB3/v8Dt9l03S+M3ugZ/BliJnwNO3S6PnypuNd/iDEW8tm5ziAaw4+WpIjPjOSDC+P4Sknv86po1I1KfiulNTWZzuYxLt6t43K/pWdtvXIAiwusTnrmtNx6o9OydLerdicAYW8uPZDXGClthAPD5UHrNSDHGMfrbjSOgny7hwvBeV+io49V6nUSrEyefX1SCizUrXfpFcPcaNaP1uikZ6zTdp6QE8txfYmpY6lPPZea1QEmr+AwO6YbqtNpEKjRzbK8OLizrsNXLTOr07oBWZ7lyRXrjj4NdSN1JgucND+wSqUVepG5NhEavbsNHeGdPGkwl8fVfegFeCtv53Vy9j2E8E7WFvyRbVXV5zL3+IhICEz4P48mPxlijaiiigAAAABJRU5ErkJggg=="
+    }
+  },
+  "mapFallbackImage": "/mock/map-fallback.png"
+}

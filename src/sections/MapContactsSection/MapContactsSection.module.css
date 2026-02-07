@@ -1,0 +1,358 @@
+/* ===== Секция "Как к нам добраться" ===== */
+.section {
+  width: 1536px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 0 84px;
+  box-sizing: border-box;
+}
+
+/* ===== Заголовок секции ===== */
+.headerBlock {
+  width: 1368px;
+  height: 40px;
+}
+
+.title {
+  width: 1368px;
+  height: 35px;
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #162036;
+  margin: 0;
+}
+
+/* ===== Основной блок (карта + карточка) ===== */
+.mainBlock {
+  width: 1368px;
+  height: 570px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== Левая зона с картой ===== */
+.mapContainer {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== Fallback для офлайн режима ===== */
+.mapFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #E8EEF5 0%, #D1DAE6 100%);
+  color: #454D5E;
+  font-family: "Hauora", sans-serif;
+  font-size: 16px;
+  gap: 16px;
+}
+
+.mapFallbackIcon {
+  width: 64px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+/* ===== Кнопки зума (декоративные) ===== */
+.zoomControls {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 76px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 
+    0px 1.44px 2.06px 0px rgba(20, 20, 20, 0.01),
+    0px 3.65px 5.21px 0px rgba(20, 20, 20, 0.02),
+    0px 7.44px 10.63px 0px rgba(20, 20, 20, 0.02),
+    0px 42px 60px 0px rgba(20, 20, 20, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.zoomButton {
+  width: 36px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #162036;
+  font-weight: 300;
+}
+
+.zoomButton:first-child {
+  border-bottom: 1px solid #DDE2EB;
+}
+
+.zoomButton:hover {
+  background: #F6F8FB;
+}
+
+/* ===== Нижние кнопки на карте ===== */
+.mapOverlayButtons {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: 288px;
+  height: 36px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.mapButton {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 
+    0px 1.44px 2.06px 0px rgba(20, 20, 20, 0.01),
+    0px 3.65px 5.21px 0px rgba(20, 20, 20, 0.02),
+    0px 7.44px 10.63px 0px rgba(20, 20, 20, 0.02),
+    0px 42px 60px 0px rgba(20, 20, 20, 0.04);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mapButton:hover {
+  background: #F6F8FB;
+}
+
+.mapButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.mapButtonText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #162036;
+}
+
+/* ===== Правая карточка ===== */
+.contactCard {
+  width: 363px;
+  height: 506px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 20px;
+  padding: 24px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  z-index: 10;
+}
+
+/* ===== Блок с адресом ===== */
+.addressBlock {
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metroRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 20px;
+}
+
+.metroIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.metroName {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #454D5E;
+}
+
+.address {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #162036;
+  margin: 0;
+}
+
+.workingHours {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #454D5E;
+  margin: 0;
+}
+
+/* ===== Блок контактов ===== */
+.contactBlock {
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactLabel {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #454D5E;
+  margin: 0;
+}
+
+.contactLink {
+  font-family: "Hauora", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #162036;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+/* ===== Соцсети ===== */
+.socialBlock {
+  width: 248px;
+  display: flex;
+  gap: 8px;
+}
+
+.socialButton {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid #DDE2EB;
+  background: #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.socialButton:hover {
+  background: #F6F8FB;
+}
+
+.socialButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== Кнопки действий ===== */
+.actionsBlock {
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 24px;
+  border-top: 1px solid #DDE2EB;
+}
+
+.actionButton {
+  width: 315px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 0 32px;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.actionButtonPrimary {
+  background: #3475FF;
+  border: none;
+}
+
+.actionButtonPrimary:hover {
+  background: #2860D8;
+}
+
+.actionButtonOutline {
+  background: #FFFFFF;
+  border: 1px solid #DDE2EB;
+}
+
+.actionButtonOutline:hover {
+  background: #F6F8FB;
+}
+
+.actionButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.actionButtonText {
+  font-family: "Hauora", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.actionButtonTextWhite {
+  color: #FFFFFF;
+}
+
+.actionButtonTextBlack {
+  color: #162036;
+}
+
+/* ===== Tenchat SVG иконка ===== */
+.tenchatIcon {
+  width: 20px;
+  height: 20px;
+}

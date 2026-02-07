@@ -12,6 +12,7 @@ import { CatalogSection } from "./sections/CatalogSection";
 import { HeroSlider } from "./sections/HeroSlider";
 import { Header } from "./sections/Header";
 import { Footer } from "./sections/Footer";
+import { MapContactsSection } from "./sections/MapContactsSection";
 import "./App.css";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <ReviewsSection />
         <NewsSection />
         <CtaBannerConsultation />
+        <MapContactsSection />
       </main>
       <Footer />
     </div>
