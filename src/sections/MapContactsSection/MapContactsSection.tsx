@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useFetch } from "../../shared/hooks/useFetch";
 import type { MapContactsData, SocialLink } from "../../shared/types/mapContacts";
+import { YandexMapWidget, type YandexMapWidgetRef } from "./components";
 import styles from "./MapContactsSection.module.css";
 
 // Иконка указателя (красная)
@@ -71,9 +72,13 @@ function SocialButton({ link }: SocialButtonProps) {
 export function MapContactsSection() {
   const { data, loading, error } = useFetch<MapContactsData>("/mock/map_contacts.json");
   const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const [iframeLoaded, setIframeLoaded] = useState(false);
-  const [iframeError, setIframeError] = useState(false);
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const [mapError, setMapError] = useState(false);
+  const [isInView, setIsInView] = useState(true); // Загружаем сразу
+  const sectionRef = useRef<HTMLElement>(null);
+  const mapWidgetRef = useRef<YandexMapWidgetRef>(null);
 
+  // Отслеживание online/offline состояния
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
@@ -87,26 +92,51 @@ export function MapContactsSection() {
     };
   }, []);
 
-  // Таймаут для загрузки iframe
+  // Lazy-load: загружаем карту только когда секция в viewport
   useEffect(() => {
-    if (!isOnline) return;
-    
-    const timeout = setTimeout(() => {
-      if (!iframeLoaded) {
-        setIframeError(true);
-      }
-    }, 10000); // 10 секунд таймаут
+    if (!sectionRef.current) return;
 
-    return () => clearTimeout(timeout);
-  }, [isOnline, iframeLoaded]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: "200px" }
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleMapLoad = useCallback(() => {
+    setMapLoaded(true);
+  }, []);
+
+  const handleMapError = useCallback(() => {
+    setMapError(true);
+  }, []);
+
+  const handleZoomIn = useCallback(() => {
+    mapWidgetRef.current?.zoomIn();
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    mapWidgetRef.current?.zoomOut();
+  }, []);
 
   if (loading) return <div>Загрузка...</div>;
   if (error || !data) return null;
 
   const {
     title,
+    coords,
+    zoom,
     yandexMapUrl,
-    yandexMapIframeUrl,
+    howToGetUrl,
+    taxiUrl,
     metroStation,
     address,
     workingHours,
@@ -118,10 +148,10 @@ export function MapContactsSection() {
     mapButtons,
   } = data;
 
-  const showMap = isOnline && !iframeError;
+  const showMap = isOnline && !mapError && isInView;
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} ref={sectionRef}>
       {/* Заголовок */}
       <div className={styles.headerBlock}>
         <h2 className={styles.title}>{title}</h2>
@@ -132,13 +162,12 @@ export function MapContactsSection() {
         {/* Карта */}
         <div className={styles.mapContainer}>
           {showMap ? (
-            <iframe
-              src={yandexMapIframeUrl}
-              className={styles.mapIframe}
-              title="Яндекс Карты"
-              onLoad={() => setIframeLoaded(true)}
-              onError={() => setIframeError(true)}
-              allowFullScreen
+            <YandexMapWidget
+              ref={mapWidgetRef}
+              coords={coords}
+              zoom={zoom}
+              onLoad={handleMapLoad}
+              onError={handleMapError}
             />
           ) : (
             <div className={styles.mapFallback}>
@@ -147,18 +176,30 @@ export function MapContactsSection() {
             </div>
           )}
 
-          {/* Кнопки зума (декоративные) */}
-          {showMap && (
+          {/* Кнопки зума (кастомные) */}
+          {(showMap || mapLoaded) && (
             <div className={styles.zoomControls}>
-              <button className={styles.zoomButton} aria-label="Приблизить">+</button>
-              <button className={styles.zoomButton} aria-label="Отдалить">−</button>
+              <button 
+                className={styles.zoomButton} 
+                aria-label="Приблизить"
+                onClick={handleZoomIn}
+              >
+                +
+              </button>
+              <button 
+                className={styles.zoomButton} 
+                aria-label="Отдалить"
+                onClick={handleZoomOut}
+              >
+                −
+              </button>
             </div>
           )}
 
           {/* Кнопки на карте */}
           <div className={styles.mapOverlayButtons}>
             <a
-              href={yandexMapUrl}
+              href={howToGetUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapButton}
@@ -167,7 +208,7 @@ export function MapContactsSection() {
               <span className={styles.mapButtonText}>{mapButtons.howToGet.label}</span>
             </a>
             <a
-              href={yandexMapUrl}
+              href={taxiUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapButton}

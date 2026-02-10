@@ -4,8 +4,10 @@
     "lat": 55.743598,
     "lng": 37.505394
   },
+  "zoom": 16,
   "yandexMapUrl": "https://yandex.com/maps/-/CPE2BQMk",
-  "yandexMapIframeUrl": "https://yandex.ru/map-widget/v1/?ll=37.505394%2C55.743598&z=16&pt=37.505394,55.743598,pm2rdm",
+  "howToGetUrl": "https://yandex.ru/maps/213/moscow/?ll=37.505498%2C55.743527&mode=routes&rtext=~55.743598%2C37.505394&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D166246588411&z=16.13",
+  "taxiUrl": "https://yandex.ru/maps/213/moscow/?ll=37.505498%2C55.743527&mode=routes&rtext=~55.743598%2C37.505394&rtt=taxi&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D166246588411&z=16.13",
   "metroStation": {
     "name": "Багратионовская",
     "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEX////54uTtrrHnlJj43+D10tTZO0TPAADSAADXLDjzycvmio7dWmH21tjfY2rjfYLlhInutLbxv8Hhc3nyxsjvubzWIi/faW/++vrUABvTABDWHSv76+zpm5/rpancT1fVFCTUABjbSFH99vcIcgNhAAAAtElEQVR4AcXKBXLEMBBE0b8mSWZm1v3PGE6MlaLAK5rpbn7fwzBNw+KO7QiplBTK5cITvg0QhCLiJBYJH1KRcZCL4vjslRVADm4NRA07trCAvIWuAHqRsxkagFCOiZwAlMcm84Fezl05ywdQhfsyBIY2XJaq9T7HnzwF1izzOLNla8EasUmFphiGQut0GBJqkbAjTXZGqdkZxIMvvfQ4cCSfdKc40uPWdZqzf+qYvunQPX/gGVEKC71xbkayAAAAAElFTkSuQmCC"

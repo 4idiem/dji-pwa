@@ -27,8 +27,10 @@ export interface MapButtons {
 export interface MapContactsData {
   title: string;
   coords: MapCoords;
+  zoom: number;
   yandexMapUrl: string;
-  yandexMapIframeUrl: string;
+  howToGetUrl: string;
+  taxiUrl: string;
   metroStation: MetroStation;
   address: string;
   workingHours: string;

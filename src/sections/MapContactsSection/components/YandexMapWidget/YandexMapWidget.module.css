@@ -1,0 +1,104 @@
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+}
+
+/* Скрываем все встроенные элементы Yandex Maps 2.1 */
+.mapContainer :global([class*="ymaps-2-1"][class*="copyrights"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="copyright"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="map-copyrights"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="gotoymaps"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="gototaxi"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="routebutton"]),
+.mapContainer :global([class*="ymaps-2-1"][class*="searchbox"]),
+.mapContainer :global([class*="create"][class*="map"]),
+.mapContainer :global(a[href*="yandex.ru/legal"]),
+.mapContainer :global(a[href*="maps.yandex"]),
+.mapContainer :global([class*="logo"]),
+.mapContainer :global([title*="условия"i]),
+.mapContainer :global([title*="Яндекс"i]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Ошибка */
+.errorWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #E8EEF5 0%, #D1DAE6 100%);
+  gap: 16px;
+}
+
+.errorText {
+  font-family: "Hauora", sans-serif;
+  font-size: 14px;
+  color: #454D5E;
+  margin: 0;
+  text-align: center;
+}
+
+.errorLink {
+  font-family: "Hauora", sans-serif;
+  font-size: 14px;
+  color: #3475FF;
+  text-decoration: none;
+}
+
+.errorLink:hover {
+  text-decoration: underline;
+}
+
+/* Кастомный маркер (не используется в 2.1, но оставим) */
+.customMarker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -100%);
+  cursor: default;
+  pointer-events: none;
+}
+
+.customMarker svg {
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* Загрузка */
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #E8EEF5 0%, #D1DAE6 100%);
+  z-index: 5;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #DDE2EB;
+  border-top-color: #3475FF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
