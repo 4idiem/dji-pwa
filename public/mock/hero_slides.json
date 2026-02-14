@@ -9,7 +9,7 @@
     },
     "productCard": {
       "badgeText": "Рекомендуем",
-      "productImage": "https://static.tildacdn.com/tild6137-3430-4862-a339-636539313339/mini-5-pro-product-c.png",
+      "productImage": "/images/djimini4pro.png",
       "productName": "DJI Mini 4 Pro",
       "priceCurrent": "104 000 ₽",
       "priceOld": "125 000 ₽",
@@ -26,7 +26,7 @@
     },
     "productCard": {
       "badgeText": "Новинка",
-      "productImage": "https://static.tildacdn.com/tild6239-6634-4536-b161-303831333564/mavic-4-pro-product-.png",
+      "productImage": "/images/djimavic4pro.png",
       "productName": "DJI Mavic 4 Pro",
       "priceCurrent": "165 000 ₽",
       "priceOld": null,
@@ -43,7 +43,7 @@
     },
     "productCard": {
       "badgeText": "Хит продаж",
-      "productImage": "https://optim.tildacdn.com/stor6162-3939-4330-b435-663866346361/-/format/webp/66903096.jpg.webp",
+      "productImage": "/images/djimic3.png",
       "productName": "DJI Mic 3",
       "priceCurrent": "32 000 ₽",
       "priceOld": "38 000 ₽",
